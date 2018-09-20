@@ -12,6 +12,7 @@ PDF merger for Laravel inspired by another package, created for personal use. Te
 ```
 
 ## Configuration
+Make the following changes to the main configuration file located at `config/app.php`
 ```php
 'providers' => [
    ...
