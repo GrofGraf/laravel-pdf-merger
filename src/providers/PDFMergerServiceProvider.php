@@ -3,7 +3,7 @@
 namespace GrofGraf\LaravelPDFMerger\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use GrofGraf\PDFMerger\PDFMerger;
+use GrofGraf\LaravelPDFMerger\PDFMerger;
 
 class PDFMergerServiceProvider extends ServiceProvider
 {
