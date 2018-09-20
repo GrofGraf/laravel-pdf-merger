@@ -1,5 +1,5 @@
 {
-    "name": "grofgraf/pdf-merger",
+    "name": "grofgraf/laravel-pdf-merger",
     "type": "library",
     "description": "Package for Laravel that merges multiple PDFs into one.",
     "keywords": [
