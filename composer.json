@@ -18,7 +18,6 @@
       }
     ],
     "require": {
-      "illuminate/support": "^5.7.4",
       "setasign/fpdi-fpdf": "^2.0"
     },
     "autoload": {
