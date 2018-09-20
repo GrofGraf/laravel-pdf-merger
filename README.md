@@ -8,7 +8,7 @@ PDF merger for Laravel inspired by another package, created for personal use. Te
 
 ## Installation
 ```bash
- $ composer require grofgraf/pdf-merger
+ $ composer require grofgraf/laravel-pdf-merger
 ```
 
 ## Configuration
