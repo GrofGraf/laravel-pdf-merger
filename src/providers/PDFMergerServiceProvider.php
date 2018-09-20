@@ -1,6 +1,6 @@
 <?php
 
-namespace GrofGraf\PDFMerger\Providers;
+namespace GrofGraf\LaravelPDFMerger\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use GrofGraf\PDFMerger\PDFMerger;
