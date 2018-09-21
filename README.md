@@ -25,7 +25,7 @@ Make the following changes to the main configuration file located at `config/app
 ]
 ```
 
-> When merging PDFs versions above 1.4 or PDF strings, a temporary PDF will be created during the process and stored in `storage/tmp` directory
+> When merging PDFs versions above 1.4 or PDF strings, a temporary PDF will be created during the process and stored in `storage/tmp` directory, therefore you may need to create it beforehand.
 
 
 
