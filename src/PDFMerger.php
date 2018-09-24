@@ -2,7 +2,7 @@
 
 namespace GrofGraf\LaravelPDFMerger;
 
-use setasign\Fpdi\FPDI;
+use setasign\Fpdi\Fpdi;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 
@@ -30,7 +30,7 @@ class PDFMerger {
      *
      * @var FPDI
      */
-    protected $fpdi = FPDI::class;
+    protected $fpdi = Fpdi::class;
     /**
      * The final file name
      *
@@ -43,7 +43,7 @@ class PDFMerger {
      */
     public function __construct(Filesystem $filesystem){
         $this->filesystem = $filesystem;
-        $this->fpdi = new FPDI();
+        $this->fpdi = new Fpdi();
         $this->tmpFiles = collect([]);
         $this->files = collect([]);
     }
