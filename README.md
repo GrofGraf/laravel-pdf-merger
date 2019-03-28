@@ -42,7 +42,8 @@ You can set a merged PDF name by using `setFileName` method.
 $merger->setFileName('merger.pdf');
 ```
 
-At the end finnish process with `merge` method and use one of the output options for the merged PDF.
+In the end, finnish process with `merge` or `duplexMerge` method and use one of the output options for the merged PDF. The difference bwetween two methods is, that `duplexMerge` adds blank page after each merged PDF, if it has odd number of pages.
+
 Available output options are:
   * `inline()`
   * `download()`
