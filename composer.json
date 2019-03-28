@@ -19,7 +19,7 @@
     ],
     "require": {
       "illuminate/support": ">=5.5",
-      "setasign/fpdi-fpdf": "^2.0"
+      "setasign/fpdi-fpdf": ">=2.0"
     },
     "autoload": {
       "psr-4": {
