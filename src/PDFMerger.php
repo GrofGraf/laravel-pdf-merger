@@ -166,7 +166,7 @@ class PDFMerger {
       }
       $fpdi = $this->fpdi;
       $files = $this->files;
-      foreach($files as $file){
+      foreach($files as $index => $file){
         $file['orientation'] = is_null($file['orientation']) ? $orientation : $file['orientation'];
         $count = $fpdi->setSourceFile($file['name']);
         if($file['pages'] == 'all') {
