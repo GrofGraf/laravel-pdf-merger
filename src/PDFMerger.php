@@ -43,6 +43,7 @@ class PDFMerger {
      */
     public function __construct(Filesystem $filesystem){
         $this->filesystem = $filesystem;
+        $this->createDirectoryForTemporaryFiles();
         $this->fpdi = new Fpdi();
         $this->tmpFiles = collect([]);
         $this->files = collect([]);
@@ -206,5 +207,17 @@ class PDFMerger {
       }
       //return correct file path
       return $filePath;
+    }
+    
+    /**
+     * Create a the temporary file directory if it doesn't exist.
+     *
+     * @return void
+     */
+    protected function createDirectoryForTemporaryFiles(): void
+    {
+        if (! $this->filesystem->isDirectory(storage_path('tmp'))) {
+            $this->filesystem->makeDirectory(storage_path('tmp'));
+        }
     }
 }
