@@ -184,7 +184,7 @@ class PDFMerger {
               throw new \Exception("Could not load page '$page' in PDF '".$file['name']."'. Check that the page exists.");
             }
             $size = $fpdi->getTemplateSize($template);
-            $fpdi->AddPage($file['orientation'], [$size['width'], $size['height']]);
+            $fpdi->AddPage(($file['orientation']=='A'?($size['height'] > $size['width'] ? 'P' : 'L'):$file['orientation']), [$size['width'], $size['height']]);
             $fpdi->useTemplate($template);
           }
         }
