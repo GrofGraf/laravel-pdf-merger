@@ -191,7 +191,7 @@ class PDFMerger {
           for ($i = 1; $i <= $count; $i++) {
             $template   = $fpdi->importPage($i);
             $size       = $fpdi->getTemplateSize($template);
-            $fpdi->AddPage($file['orientation'], [$size['width'], $size['height']]);
+            $fpdi->AddPage(($file['orientation']=='A'?($size['height'] > $size['width'] ? 'P' : 'L'):$file['orientation']), [$size['width'], $size['height']]);
             $fpdi->useTemplate($template);
           }
         }else {
@@ -206,7 +206,7 @@ class PDFMerger {
           }
         }
         if ($duplex && $pages % 2 && $index < (count($files) - 1)) {
-          $fpdi->AddPage($file['orientation'], [$size['width'], $size['height']]);
+          $fpdi->AddPage(($file['orientation']=='A'?($size['height'] > $size['width'] ? 'P' : 'L'):$file['orientation']), [$size['width'], $size['height']]);
         }
       }
     }
