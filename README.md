@@ -32,7 +32,7 @@ Make the following changes to the main configuration file located at `config/app
 
 ## Usage
 
-You can add PDFs for merging, by specifying a file path of PDF with `addPathToPDF` method, or adding PDF file as string with `addPDFString` method. The second argument of both methods is array of selected pages (`'all'` for all pages) and the third argument is PDFs orientation (portrait or landscape).
+You can add PDFs for merging, by specifying a file path of PDF with `addPathToPDF` method, or adding PDF file as string with `addPDFString` method. The second argument of both methods is array of selected pages (`'all'` for all pages) and the third argument is PDFs orientation (portrait, landscape or automatic).
 ```php
 $merger->addPathToPDF('/path/to/pdf', 'all', 'P');
 $merger->addPDFString(file_get_contents('path/to/pdf'), ['1', '2'], 'L')
