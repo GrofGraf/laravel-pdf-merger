@@ -19,7 +19,8 @@
     ],
     "require": {
       "illuminate/support": ">=5.5",
-      "setasign/fpdi-fpdf": ">=2.0"
+      "setasign/fpdi-fpdf": ">=2.0",
+      "laravel/helpers": "^1.2"
     },
     "autoload": {
       "psr-4": {
