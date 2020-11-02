@@ -223,7 +223,7 @@ class PDFMerger {
      *
      * @return void
      */
-    protected function createDirectoryForTemporaryFiles(): void
+    protected function createDirectoryForTemporaryFiles()
     {
         if (! $this->filesystem->isDirectory(storage_path('tmp'))) {
             $this->filesystem->makeDirectory(storage_path('tmp'));
