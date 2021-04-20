@@ -1,5 +1,5 @@
 {
-    "name": "grofgraf/laravel-pdf-merger",
+    "name": "apiaget/laravel-pdf-merger",
     "version": "1.0.1",
     "type": "library",
     "description": "Package for Laravel that merges multiple PDFs into one.",
@@ -19,11 +19,12 @@
     ],
     "require": {
       "illuminate/support": ">=5.5",
-      "setasign/fpdi-fpdf": ">=2.0"
+      "setasign/fpdi-fpdf": ">=2.0",
+      "laravel/helpers": "^1.2"
     },
     "autoload": {
       "psr-4": {
-          "GrofGraf\\LaravelPDFMerger\\": "src"
+        "GrofGraf\\LaravelPDFMerger\\": "src/"
       }
     }
 }
