@@ -167,14 +167,13 @@ class PDFMerger {
       $fpdi = $this->fpdi;
       $files = $this->files;
       foreach($files as $index => $file){
-        $file['orientation'] = is_null($file['orientation']) ? $orientation : $file['orientation'];
         $count = $fpdi->setSourceFile($file['name']);
         if($file['pages'] == 'all') {
           $pages = $count;
           for ($i = 1; $i <= $count; $i++) {
             $template   = $fpdi->importPage($i);
             $size       = $fpdi->getTemplateSize($template);
-            $fpdi->AddPage($file['orientation'], [$size['width'], $size['height']]);
+            $fpdi->AddPage($file['orientation']??$size['orientation'], [$size['width'], $size['height']]);
             $fpdi->useTemplate($template);
           }
         }else {
