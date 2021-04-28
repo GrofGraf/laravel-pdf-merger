@@ -183,12 +183,12 @@ class PDFMerger {
               throw new \Exception("Could not load page '$page' in PDF '".$file['name']."'. Check that the page exists.");
             }
             $size = $fpdi->getTemplateSize($template);
-            $fpdi->AddPage($file['orientation'], [$size['width'], $size['height']]);
+            $fpdi->AddPage($file['orientation']??$size['orientation'], [$size['width'], $size['height']]);
             $fpdi->useTemplate($template);
           }
         }
         if ($duplex && $pages % 2 && $index < (count($files) - 1)) {
-          $fpdi->AddPage($file['orientation'], [$size['width'], $size['height']]);
+          $fpdi->AddPage($file['orientation']??$size['orientation'], [$size['width'], $size['height']]);
         }
       }
     }
